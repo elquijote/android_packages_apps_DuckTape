@@ -3,10 +3,10 @@
 
 	<PreferenceCategory android:title="Apps2SD">
 
-		<CheckBoxPreference android:key="apps2sd_prompt"
-			android:title="Installation Prompt"
-			android:summaryOff="Don't prompt for installation locaiton." 
-			android:summaryOn="Prompt for installation location."/>
+		<CheckBoxPreference android:key="apps2sd"
+			android:title="Enable A2SD"
+			android:summaryOff="Automatically install new apps to SD."
+			android:summaryOn="Automatically install new apps to internal memory."/>
 			
 	</PreferenceCategory>
 

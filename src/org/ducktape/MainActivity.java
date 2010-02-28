@@ -30,7 +30,7 @@ public class MainActivity extends PreferenceActivity implements SharedPreference
 
 		addPreferencesFromResource(R.xml.prefs);
 		PreferenceScreen prefSet = getPreferenceScreen();
-		mApps2SDPrompt = (CheckBoxPreference) prefSet.findPreference("apps2sd_prompt");
+		mApps2SD = (CheckBoxPreference) prefSet.findPreference("apps2sd");
 		loadValues();
 		final PreferenceGroup parentPreference = getPreferenceScreen();
 		parentPreference.getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
@@ -38,8 +38,8 @@ public class MainActivity extends PreferenceActivity implements SharedPreference
 
 	@Override
 	public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {
-		if (key.equals("apps2sd_prompt")) {
-			writeToProvider("apps2sd_prompt",mApps2SDPrompt.isChecked()? "1" : "0");
+		if (key.equals("apps2sd")) {
+			writeToProvider("apps2sd",mApps2SD.isChecked()? "1" : "0");
 		}
 	}
 	
@@ -62,7 +62,7 @@ public class MainActivity extends PreferenceActivity implements SharedPreference
 	}
 	
 	private void loadValues() {
-		mApps2SDPrompt.setChecked(getInt("apps2sd_prompt",0)!=0);
+		mApps2SD.setChecked(getInt("apps2sd",0)!=0);
 	}
 	
 	private int getInt(String key, int def) {
