@@ -20,18 +20,15 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE_TAGS := user
+LOCAL_MODULE_TAGS := eng
 
 # This is the target being built.
-LOCAL_PACKAGE_NAME := PlatformLibraryClient
+LOCAL_PACKAGE_NAME := DuckTape
 
 # Only compile source java files in this apk.
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 # Link against the current Android SDK.
 LOCAL_SDK_VERSION := current
-
-# Also link against our own custom library.
-LOCAL_JAVA_LIBRARIES := com.example.android.platform_library
 
 include $(BUILD_PACKAGE)
