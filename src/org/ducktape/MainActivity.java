@@ -1,16 +1,13 @@
 package org.ducktape;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.preference.PreferenceActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends PreferenceActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TextView tv = new TextView(this);
-        tv.setText("quack quack");
-        setContentView(tv);
+        addPreferencesFromResource(R.xml.prefs);
     }
 }
