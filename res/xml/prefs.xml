@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="Apps2SD">
+
+		<CheckBoxPreference android:key="apps2sd_prompt"
+			android:title="Installation Prompt"
+			android:summaryOff="Don't prompt for installation locaiton." 
+			android:summaryOn="Prompt for installation location."/>
+
+	</PreferenceCategory>
+
+</PreferenceScreen>
