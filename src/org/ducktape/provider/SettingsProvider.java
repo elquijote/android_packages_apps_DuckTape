@@ -183,8 +183,8 @@ public class SettingsProvider extends ContentProvider {
 
 	private static class DatabaseHelper extends SQLiteOpenHelper {
 
-		private static final String DATABASE_NAME = "yaxim.db";
-		private static final int DATABASE_VERSION = 4;
+		private static final String DATABASE_NAME = "settings.db";
+		private static final int DATABASE_VERSION = 3;
 
 		public DatabaseHelper(Context context) {
 			super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -196,7 +196,7 @@ public class SettingsProvider extends ContentProvider {
 
 			db.execSQL("CREATE TABLE " + TABLE_NAME + " (" + Constants._ID
 					+ " INTEGER PRIMARY KEY AUTOINCREMENT," + Constants.KEY
-					+ " TEXT," + Constants.VALUE + " TEXT);");
+					+ " TEXT UNIQUE," + Constants.VALUE + " TEXT);");
 		}
 
 		@Override
